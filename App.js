@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, SafeAreaView } from "react-native";
+
+// Hooks
+import { useGoalHandler } from "./src/hooks/useGoalHandler";
+
+// Components
+import GoalInput from "./src/components/GoalInput";
+import GoalList from "./src/components/GoalList";
 
 export default function App() {
+  // Hook where all of the goal item logic is stored
+  const { goalList, saveGoalHandler, goalInputHandler, deleteGoalHandler } =
+    useGoalHandler();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <GoalInput onChange={goalInputHandler} onPress={saveGoalHandler} />
+      <GoalList listOfGoals={goalList} onDelete={deleteGoalHandler}/>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    margin: 40,
   },
 });
