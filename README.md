@@ -3,15 +3,15 @@
 
 ## Splash Screen
 
-![SplashScreen](./assets/splash-screen.jpg)
+<img src="./assets/splash-screen.jpg" width="200px">
 
 ## Main Screen
 
-![MainScreen](./assets/main-screen.jpg)
+<img src="./assets/main-screen.jpg" width="200px">
 
 ## Modal/Input Screen
 
-![SplashScreen](./assets/input-screen.jpg)
+<img src="./assets/input-screen.jpg" width="200px">
 
 ## Description
 
@@ -32,7 +32,9 @@ Status: Finished
 
 In the project directory, you can run:
 
-### `npm start`
+```
+npm start
+```
 
 - First, download Expo in your device.
 - Run the app in the development mode with the mentioned command "npm start".
