@@ -1,11 +1,12 @@
 import React from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 function GoalItem(props) {
   return (
     <Pressable onPress={props.onDelete.bind(this, props.id)}>
       <View style={styles.goalView}>
         <Text style={styles.goalText}>{props.goal}</Text>
+        <Image style={styles.trashIcon} source={require("../../assets/trash.png")}/>
       </View>
     </Pressable>
   );
@@ -13,14 +14,22 @@ function GoalItem(props) {
 
 const styles = StyleSheet.create({
   goalView: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     margin: 8,
-    padding: 8,
+    padding: 12,
     borderRadius: 5,
-    backgroundColor: "#FFC090",
+    backgroundColor: "#635985",
   },
   goalText: {
-    color: "black",
+    color: "#fff",
+    fontSize: 16
   },
+  trashIcon: {
+    width: 30,
+    height: 30
+  }
 });
 
 export default GoalItem;

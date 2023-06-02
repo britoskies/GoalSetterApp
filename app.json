@@ -4,12 +4,13 @@
     "slug": "GoalSetter",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/goal-logo.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#03001C",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/goal-logo-white.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#03001C"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -19,8 +20,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/goal-logo-white.png",
+        "backgroundColor": "#393053"
       }
     },
     "web": {
